@@ -52,7 +52,6 @@ class App(tk.Tk):
         c = a + self.canvas.winfo_width()
         d = b + self.canvas.winfo_height()
         image = ImageGrab.grab().crop((a,b,c,d))
-        #image.save("image.png")
         predicted_digit = predict(image)
         self.label2.configure(text = "Digit recognised as : {}".format(str(predicted_digit)))
     
